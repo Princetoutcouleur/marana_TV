@@ -2,7 +2,7 @@ import React from "react";
 
 const YoutubeVideo = ({ videoId, title }) => {
   return (
-    <div className="youtube-video">
+    <div className="youtube-video mb-5">
       <div className="video-responsive">
         <iframe
           src={`https://www.youtube.com/embed/${videoId}`}

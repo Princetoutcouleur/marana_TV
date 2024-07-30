@@ -82,6 +82,7 @@ const Hero = () => {
               title={video.title}
               width="100%"
               height="100%"
+              className='mb-5'
             />
           ))}
         </div>

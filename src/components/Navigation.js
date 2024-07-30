@@ -1,11 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../Assets/img/logo-blanc.png";
 import { FaBarsStaggered } from "react-icons/fa6";
 
 const Navigation = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      const windowHeight = window.innerHeight;
+
+      if (offset > windowHeight / 2) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <div id="navigation">
-      <nav class="navbar navbar-expand-lg bg-transparent fixed-top">
+      <nav
+        className={`navbar navbar-expand-lg fixed-top ${
+          scrolled ? "scrolled" : "bg-transparent"
+        }`}
+      >
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
             <img src={logo} alt="" className="navbar-logo" />

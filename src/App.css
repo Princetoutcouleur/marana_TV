@@ -13,10 +13,15 @@
   font-size: 60px;
 }
 .navbar {
+  transition: background-color 0.3s ease;
+}
+
+.bg-transparent {
   background: rgba(238, 32, 84, 0.33);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+}
+
+.scrolled {
+  background-color: #FF4377 !important;
 }
 .navbar-logo {
   width: 120px;
