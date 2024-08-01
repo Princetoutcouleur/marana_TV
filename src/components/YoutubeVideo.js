@@ -1,17 +1,13 @@
 import React from "react";
 
-const YoutubeVideo = ({ videoId, title }) => {
+import video from '../Assets/video/video_presentation.mp4'
+
+const YoutubeVideo = () => {
   return (
     <div className="youtube-video mb-5">
-      <div className="video-responsive">
-        <iframe
-          src={`https://www.youtube.com/embed/${videoId}`}
-          title={title}
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
-      </div>
+      <video className="w-100 h-100" controls>
+        <source src={video} type="video/mp4" />
+      </video>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import imange from "../Assets/img/IMG-20240730-WA0005.jpg";
+import imange from "../Assets/img/sumu.jpg";
 
 const TalkShow = () => {
   return (
