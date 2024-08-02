@@ -7,6 +7,7 @@ import Mode from "./components/Mode";
 import Beauty from "./components/Beauty";
 import Life from "./components/Life";
 import TalkShow from "./components/TalkShow";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Beauty />
       <Life />
       <TalkShow />
+      <Footer/>
     </div>
   );
 }
